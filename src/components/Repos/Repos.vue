@@ -2,14 +2,7 @@
   <section class="service section">
     <div class="user__section">
       <div v-if="loading">
-        <BeatLoader
-          color="lightseagreen"
-          loading
-          size="20"
-          aria-label="Loading Spinner"
-          data-testid="loader"
-          class="loader"
-        />
+        <LoaderComponent />
       </div>
       <div v-else>
         <repo-card :repos="paginatedPosts" />
@@ -32,14 +25,14 @@ import axios from "axios";
 import { reactive, toRefs, watchEffect, computed } from "vue";
 import RepoCard from "./RepoCard.vue";
 import Pagination from "./Pagination.vue";
-import BeatLoader from "vue-spinner/src/BeatLoader.vue";
+import LoaderComponent from "../LoaderComponent.vue"
 
 export default {
   name: "RepoS",
   components: {
     RepoCard,
     Pagination,
-    BeatLoader,
+    LoaderComponent
   },
   setup() {
     const state = reactive({

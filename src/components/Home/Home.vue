@@ -2,7 +2,7 @@
     <section class="about">
       <div class="roww">
         <div className="columnn">
-            <img src="../../assets/logo.png" alt="user" />
+            <img src="../../assets/IMG_3749_E.jpg" alt="user" />
           </div>
         <div class="columnn">
           <div class="about-info">
@@ -10,25 +10,24 @@
               <h2>About GitXplore</h2>
             </div>
             <h3>
-              GitXplore is a react web application that lets you explore your
+              GitXplore is a Vue web application that lets you explore your
               Github portfolio in a stylish and user-friendly way.
             </h3>
             <p>
-              Simply enter your Github username on the home page and GitXplore
-              will retrieve your data from the Github API.
+              By simply appending your Github username to the API url, GitXplore
+              will retrieve your data from the Github server.
             </p>
             <p>
               Your repositories will be displayed with eye-catching colors and
               designs, making it easy to navigate and find what you're looking
               for. By clicking on each repository, you'll be able to see
               specific information, including details about the
-              repository and its contents. If you don't have a Github username,
-              you can try the app out using the test case "Emmy-Styles".
+              repository and its contents.
             </p>
             <div class="personal-info">
               <div class="btn">
                 <a
-                  href="https://github.com/Emmy-Styles/AltSchool-Exam-Project"
+                  href="https://github.com/Emmy-Styles/AltSchool-Third-Sem-Project"
                   class="banner-btn"
                   target="_blank"
                   rel="noreferrer"
@@ -129,6 +128,7 @@
     text-transform: uppercase;
     text-decoration: none;
     border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
     font-weight: bold;
     margin-right: 10px;
     transition: all 0.5s;

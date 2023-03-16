@@ -1,21 +1,21 @@
 <template>
-      <div v-for="(repo, index) in repos" :key="index"  class="container">
-        <router-link :to="`/repos/${repo.name}`" class="single-repo">
+  <div class="container">
+    <div v-for="(repo, index) in repos" :key="index" class="single-repo">
+      <router-link :to="`/repos/${repo.name}`" class="link">
+        <div class="repoIcon">
           <div>
-            <div class="repoIcon">
-              <div>
-                <h1 class="heading">{{ repo.name }}</h1>
-              </div>
-              <div> 
-                <fa icon="fa-solid fa-expand-arrows-alt" class="icon-item"></fa>
-                <!-- <BiArrowsAngleExpand class="icon-item"/> -->
-              </div>
-            </div>
-            <p>{{ repo.description }}</p>
-          </div>              
-        </router-link>
-      </div>
-  </template>
+            <h1 class="heading">{{ repo.name }}</h1>
+          </div>
+          <div>
+            <fa icon="fa-solid fa-expand" class="icon-item"></fa>
+          </div>
+        </div>
+        <p>{{ repo.description }}</p>
+      </router-link>
+    </div>
+  </div>
+</template>
+
   
   <script>
 //   import { BiArrowsAngleExpand } from "../../../node_modules/vue-icons/icons";
@@ -40,36 +40,37 @@
     gap: 30px;
     padding-left: 10px;
     margin: 40px 150px;
-    /* max-width: 76.25rem; */
     align-self: center;
   }
 
 .single-repo {
-    padding: 20px 15px;
+  padding: 20px 15px;
   background-color: #e6f3f7;
-  color: lightseagreen;
   border-radius: 8px;
   text-align: left;
-  text-decoration: none;
+  
 }
 
-/* .single-repo a {
-    color: #1f197a;
-    font-size: 20px;
-    font-weight: 700;
-    text-decoration: none;
-} */
+.link {
+  text-decoration: none;
+  color: lightseagreen;
+  text-align: left
+}
 
-/* .single-repo dd {
-    margin-top: 20px;
-} */
-
+.link p {
+  padding: 10px;
+  font-family:'Poppins', sans-serif;
+}
 .repoIcon {
     display: flex;
     justify-content: space-between;
     align-content: center;
 }
 
+.repoIcon h1 {
+  font-family:'Poppins', sans-serif;
+  padding-right: 1rem;
+}
 .single-repo:nth-child(+1) {
     background-color: #f7ebff;
     box-shadow: 0px 5px 10px 0px #cbb9d4;

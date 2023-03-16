@@ -106,7 +106,7 @@ export default {
   list-style: none;
   padding: 0 20px;
   position: relative;
-  font-family: "Bai Jamjuree", sans-serif;
+  font-family:'Poppins', sans-serif;
 }
 
 #navbar li a, Link {

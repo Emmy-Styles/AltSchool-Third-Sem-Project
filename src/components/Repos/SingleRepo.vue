@@ -2,13 +2,13 @@
     <div class="container__repo">
       <div>
         <div v-if="loading">
-          <BeatLoader color="lightseagreen" loading="true" size="20" aria-label="Loading Spinner" data-testid="loader" class="loader"/>
+          <LoaderComponent />
         </div>
         <div v-else>
           <div v-for="(repo, index) in filteredRepos" :key="index" class="repo__container">
             <router-link to="/repos">
               <button class="btn__primary">
-                <fa icon="fa-solid fa-backward" class="back__icon"></fa>
+                <fa icon="fa-solid fa-arrow-left-rotate" class="back__icon"></fa>
                 <!-- <Back class="back__icon" /> -->
                 &nbsp;Back to Repos
               </button>
@@ -76,14 +76,14 @@
   
   <script>
   import axios from "axios";
-  import { BeatLoader } from "vue-spinner/dist/vue-spinner.min";
+  import LoaderComponent from "../LoaderComponent.vue"
   import { Fa } from '@fortawesome/vue-fontawesome'
 //   import { Back, Github, Fork, Issues, Eye, Folder, Network, Subscribers } from "@/icons";
   export default {
     name: "RepoPage",
     components: {
       Fa,
-      BeatLoader,
+      LoaderComponent,
     },
     data() {
       return {
@@ -112,7 +112,19 @@
   </script>
 
 <style scoped>
-    @import url("https://fonts.googleapis.com/css2?family=Fasthand&family=Fuzzy+Bubbles:wght@400;700&family=Montserrat:ital,wght@1,197&family=Poppins:wght@300;400;500;600&family=Roboto:wght@400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fasthand&family=Fuzzy+Bubbles:wght@400;700&family=Montserrat:ital,wght@1,197&family=Poppins:wght@300;400;500;600&family=Roboto:wght@400;500;700;900&display=swap");
+
+.repo__container {
+  /* max-width: 100%; */
+  align-items: center;
+  justify-content: center;
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+.repo__container h2 {
+  font-family:'Poppins', sans-serif;
+}
+
 .repoContainer {
   margin-top: 100px;
   padding: 40px;
@@ -233,6 +245,12 @@ button.back {
 .repoDetails p {
   border-bottom: 1px solid lightseagreen;
   padding-bottom: 8px;
+  font-family:'Poppins', sans-serif;
+  font-weight: normal;
+}
+
+.repoDetails h2 {
+  font-family:'Poppins', sans-serif;
 }
 
 .stats__container {
@@ -260,6 +278,7 @@ button.back {
 
 .statsBox p {
   color: #333;
+  font-family:'Poppins', sans-serif;
 }
 
 .statsBox:nth-child(5n + 1) {
@@ -297,6 +316,13 @@ button.back {
   text-align: center;
   justify-content: center;
   padding: 8rem;
+}
+
+@media screen and ( max-width: 725px ) {
+  .repo__container {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
 }
 </style>
   
