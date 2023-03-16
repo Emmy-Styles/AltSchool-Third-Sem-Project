@@ -101,6 +101,7 @@ export default {
     justify-content: center;
     position: relative;
     text-align: center;
+    margin-bottom: 4rem;
     
 }
   </style>
