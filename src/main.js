@@ -47,7 +47,7 @@ const router = createRouter({
         component: SingleRepo
     },
     {
-        path: "/:catchAll(.*)",
+        path: '/:catchAll(.*)',
         name: 'WildCard',
         component: WildCard
     }
