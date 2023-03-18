@@ -183,11 +183,12 @@ import { Fa } from '@fortawesome/vue-fontawesome';
     font-size: 20px;
     font-weight: 500;
     margin-bottom: 6px;
+    font-family: 'Poppins', sans-serif;
 }
 
 .text p {
     font-size: 16px;
-    font-family: "Bai Jamjuree", sans-serif;
+    font-family: 'Poppins', sans-serif;
     color: #333;
     font-weight: 400;
     line-height: 28px;

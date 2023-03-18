@@ -5,6 +5,7 @@ import Home from '@/components/Home/Home.vue'
 import Contact from '@/components/Contact/Contact.vue'
 import Repos from '@/components/Repos/Repos.vue'
 import SingleRepo from '@/components/Repos/SingleRepo.vue'
+import WildCard from '@/components/WildCard.vue'
 
 /* import the fontawesome core */
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -17,17 +18,19 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope, faFolder } from '@fortawesome/free-regular-svg-icons'
-import { faPhone, faLocationDot, faCodeFork, faWarning, faEye, faWifiStrong, faPeopleGroup, faArrowLeftRotate, faExpand } from '@fortawesome/free-solid-svg-icons'
+import { faPhone, faLocationDot, faCodeFork, faWarning, faEye, faWifiStrong, faPeopleGroup, faArrowLeftRotate, faExpand }
+from '@fortawesome/free-solid-svg-icons'
 /* add icons to the library */
-library.add(faGithub, faEnvelope, faPhone, faLocationDot, faExpand, faArrowLeftRotate, faCodeFork, faWarning, faEye, faFolder, faWifiStrong, faPeopleGroup)
+library.add(faGithub, faEnvelope, faPhone, faLocationDot, faExpand, faArrowLeftRotate, 
+faCodeFork, faWarning, faEye, faFolder, faWifiStrong, faPeopleGroup)
 
-const router = createRouter ({
+const router = createRouter({
     history: createWebHistory(),
     routes: [{
         path: '/',
         name: 'Home',
         component: Home
-    }, 
+    },
     {
         path: '/contact',
         name: 'Contact',
@@ -38,14 +41,20 @@ const router = createRouter ({
         name: 'Repos',
         component: Repos
     },
-    { path: '/repos/:name', 
-      name: 'SingleRepo',
-      component: SingleRepo 
+    {
+        path: '/repos/:name',
+        name: 'SingleRepo',
+        component: SingleRepo
+    },
+    {
+        path: "/:pathMatch(.*)",
+        name: 'WildCard',
+        component: WildCard
     }
     ],
-    })
+})
 
 createApp(App)
-.use(router)
-.component('fa', FontAwesomeIcon)
-.mount('#app')
+    .use(router)
+    .component('fa', FontAwesomeIcon)
+    .mount('#app')
