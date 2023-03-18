@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 Page</title>
+    <title>404 Page Not Found</title>
     <style>
         .wildCard {
         margin-top: 2rem;
@@ -26,13 +26,37 @@
         font-family: 'Poppins', sans-serif;
         font-weight: 600;
     }
+    .banner-btn {
+    padding: 10px 30px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    margin-right: 10px;
+    transition: all 0.5s;
+    color: white;
+    background-color: lightseagreen;
+    border: 2px solid lightseagreen;
+  }
+  
+  .banner-btn:hover {
+    color: lightseagreen;
+    background: #fff;
+  }
+  .btn {
+      margin-top: 15px;
+  }
     </style>
 </head>
 <body>
     <div class="wildCard">
         <h1>404</h1>
         <p>The requested page was not found</p>
-        <img src="/src/Images/404.png" alt="oops!">
-    </div>
+        <img src="./404.png" alt="oops!" />
+        <div class="btn">
+          <router-link to="/" class="banner-btn"> Home </router-link>
+        </div>
+      </div>
 </body>
 </html>
