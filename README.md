@@ -1,5 +1,6 @@
 # git-xplore
-
+# Hosted Link
+https://gitxplore-altschool.netlify.app/
 ## Project setup
 ```
 npm install
