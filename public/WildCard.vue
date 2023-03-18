@@ -2,9 +2,9 @@
     <div class="wildCard">
       <h1>404</h1>
       <p>The requested page was not found</p>
-      <img src="/src/Images/404.png" alt="oops!" />
+      <img src="./images/404.png" alt="oops!" />
       <div class="btn">
-        <RouterLink to="/" class="banner-btn"> Home </RouterLink>
+        <router-link to="/" class="banner-btn"> Home </router-link>
       </div>
     </div>
   </template>

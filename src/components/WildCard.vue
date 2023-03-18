@@ -4,7 +4,7 @@
     <p>The requested page was not found</p>
     <img src="../Images/404.png" alt="oops!" />
     <div class="btn">
-      <RouterLink to="/" class="banner-btn" rel="noreferrer"> Home </RouterLink>
+      <router-link to="/" class="banner-btn" rel="noreferrer"> Home </router-link>
     </div>
   </div>
 </template>
