@@ -1,62 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>404 Page Not Found</title>
     <style>
-        .wildCard {
+      .wildCard {
         margin-top: 2rem;
         padding: 10px;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-    }
-    
-    h1 {
-        font-family: 'Poppins', sans-serif;
+      }
+
+      h1 {
+        font-family: "Poppins", sans-serif;
         color: lightseagreen;
         /* font-weight: 2000px; */
         font-size: 70px;
-    }
+      }
 
-    p {
-        font-family: 'Poppins', sans-serif;
+      p {
+        font-family: "Poppins", sans-serif;
         font-weight: 600;
-    }
-    .banner-btn {
-    padding: 10px 30px;
-    text-transform: uppercase;
-    text-decoration: none;
-    border-radius: 5px;
-    font-family: "Poppins", sans-serif;
-    font-weight: bold;
-    margin-right: 10px;
-    transition: all 0.5s;
-    color: white;
-    background-color: lightseagreen;
-    border: 2px solid lightseagreen;
-  }
-  
-  .banner-btn:hover {
-    color: lightseagreen;
-    background: #fff;
-  }
-  .btn {
-      margin-top: 15px;
-  }
+      }
+      .banner-btn {
+        padding: 10px 30px;
+        text-transform: uppercase;
+        text-decoration: none;
+        border-radius: 5px;
+        font-family: "Poppins", sans-serif;
+        font-weight: bold;
+        margin-right: 10px;
+        transition: all 0.5s;
+        color: white;
+        background-color: lightseagreen;
+        border: 2px solid lightseagreen;
+        cursor: pointer;
+      }
+
+      .banner-btn:hover {
+        color: lightseagreen;
+        background: #fff;
+        cursor: pointer;
+      }
+      .btn {
+        margin-top: 15px;
+        cursor: pointer;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="wildCard">
-        <h1>404</h1>
-        <p>The requested page was not found</p>
-        <img src="./404.png" alt="oops!" />
-        <div class="btn">
-          <router-link to="/" class="banner-btn"> Home </router-link>
-        </div>
+      <h1>404</h1>
+      <p>The requested page was not found</p>
+      <img src="./404.png" alt="oops!" />
+      <div class="btn">
+        <router-link to="/"  rel="noreferrer"><button class="banner-btn">Home</button></router-link>
       </div>
-</body>
+    </div>
+  </body>
 </html>

@@ -4,7 +4,7 @@
     <p>The requested page was not found</p>
     <img src="../Images/404.png" alt="oops!" />
     <div class="btn">
-      <router-link to="/" class="banner-btn" rel="noreferrer"> Home </router-link>
+      <router-link to="/"  rel="noreferrer"><button class="banner-btn">Home</button></router-link>
     </div>
   </div>
 </template>
@@ -49,6 +49,7 @@ p {
 .banner-btn:hover {
   color: lightseagreen;
   background: #fff;
+  cursor: pointer;
 }
 .btn {
     margin-top: 15px;
