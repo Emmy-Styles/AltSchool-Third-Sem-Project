@@ -2,6 +2,7 @@
     <div class="wildCard">
         <h1>404</h1>
         <p>The requested page was not found</p>
+        <img src="../Images/404.png" alt="oops!">
     </div>
 </template>
 
